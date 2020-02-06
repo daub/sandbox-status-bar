@@ -10,7 +10,10 @@ blacklist-1 = scroll lock
 ;   <label-layout> (default)
 ;   <label-indicator> (default)
 format = <label-layout>
+
 format-spacing = 0
+format-padding = 1
+format-underline = ${colors.border}
 
 ; Available tokens:
 ;   %layout%
@@ -19,16 +22,12 @@ format-spacing = 0
 ;   %icon%
 ; Default: %layout%
 label-layout = %icon% %layout%
-label-layout-padding = 0
-label-layout-background =
-label-layout-foreground =
 
 ; layout-icon-[0-9]+ = layout;icon
 ; Assign each layout an icon that will be available as %icon% token for the
 ; <label-layout> tag. The part before ';' will try to match %layout% value.
-
-layout-icon-default = 
-layout-icon-0 = us;
+layout-icon-default = " "
+;layout-icon-0 = "us; "
 
 ; indicator-icon-[0-9]+ = indicator;off icon;on icon
 ; Provides the content of the %icon% token in label-indicator-*

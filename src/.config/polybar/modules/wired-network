@@ -4,13 +4,16 @@ type = internal/network
 interface = enp0s31f6
 interval = 3.0
 
-format-connected-underline = #55aa55
 format-connected-prefix = ""
-format-connected-prefix-foreground = ${colors.foreground-alt}
+format-connected-underline = ${colors.border}
+
 label-connected = %local_ip%
 
-format-disconnected =  <label-disconnected>
+format-disconnected =
+format-disconnected-underline = ${colors.border}
+
 label-disconnected = " "
+
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected

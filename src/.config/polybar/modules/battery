@@ -30,20 +30,26 @@ time-format = %H:%M
 ;   <bar-capacity>
 ;   <ramp-capacity>
 ;   <animation-charging>
-format-charging = <animation-charging> <label-charging>
+format-charging = <animation-charging><label-charging>
+
+format-charging-underline = ${colors.border}
 
 ; Available tags:
 ;   <label-discharging> (default)
 ;   <bar-capacity>
 ;   <ramp-capacity>
 ;   <animation-discharging>
-format-discharging = <ramp-capacity> <label-discharging>
+format-discharging = <ramp-capacity><label-discharging>
+
+format-discharging-underline = ${colors.border}
 
 ; Available tags:
 ;   <label-full> (default)
 ;   <bar-capacity>
 ;   <ramp-capacity>
-;format-full = <ramp-capacity> <label-full>
+format-full = <label-full>
+
+format-full-underline = ${colors.border}
 
 ; Available tokens:
 ;   %percentage% (default) - is set to 100 if full-at is reached
@@ -52,6 +58,8 @@ format-discharging = <ramp-capacity> <label-discharging>
 ;   %consumption% (shows current charge rate in watts)
 label-charging = %percentage%%
 
+label-charging-padding = 1
+
 ; Available tokens:
 ;   %percentage% (default) - is set to 100 if full-at is reached
 ;   %percentage_raw%
@@ -59,18 +67,35 @@ label-charging = %percentage%%
 ;   %consumption% (shows current discharge rate in watts)
 label-discharging = %percentage%%
 
+label-discharging-padding = 1
+;label-discharging-background = ${colors.background-alt}
+
 ; Available tokens:
 ;   %percentage% (default) - is set to 100 if full-at is reached
 ;   %percentage_raw%
 label-full = 
 
+label-full-padding = 1
+label-full-foreground = ${colors.success}
+
 ; Only applies if <ramp-capacity> is used
+
+ramp-capacity-padding = 1
+ramp-capacity-foreground =
+
 ramp-capacity-0 = 
-ramp-capacity-0-foreground = ${colors.primary}
+ramp-capacity-0-foreground = ${colors.foreground-inv}
+ramp-capacity-0-background = ${colors.danger}
+
 ramp-capacity-1 = 
-ramp-capacity-1-foreground = ${colors.alert}
+ramp-capacity-1-foreground = ${colors.danger}
+
 ramp-capacity-2 = 
+ramp-capacity-2-foreground = ${colors.warning}
+
 ramp-capacity-3 = 
+ramp-capacity-3-foreground = ${colors.alert}
+
 ramp-capacity-4 = 
 ramp-capacity-5 = 
 ramp-capacity-6 = 
@@ -83,6 +108,9 @@ ramp-capacity-10 = 
 bar-capacity-width = 10
 
 ; Only applies if <animation-charging> is used
+animation-charging-padding = 1
+animation-charging-border = ${colors.alert}
+
 animation-charging-0 = 
 animation-charging-1 = 
 animation-charging-2 = 

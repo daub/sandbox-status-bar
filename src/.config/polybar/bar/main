@@ -1,4 +1,5 @@
-[bar/main]
+[bar/common]
+
 ; Use either of the following command to list available outputs:
 ; If unspecified, the application will pick the first one it finds.
 ; $ polybar -m | cut -d ':' -f 1
@@ -39,7 +40,7 @@ fixed-center = true
 ; the percentage can optionally be extended with a pixel offset like so:
 ; 50%:-10, this will result in a width or height of 50% minus 10 pixels
 width = 100%
-height = 40
+height = 32
 
 ; Offset defined as pixel value (e.g. 35) or percentage (e.g. 50%)
 ; the percentage can optionally be extended with a pixel offset like so:
@@ -86,19 +87,19 @@ line-size = 2
 ; the percentage can optionally be extended with a pixel offset like so:
 ; 50%:-10, this will result in 50% minus 10 pixels. The percentage is relative
 ; to the bar width or height depending on the border.
-border-size = 0
-border-color = ${colors.buffer}
+border-size = 6
+border-color = ${colors.background}
 
 ; Number of spaces to add at the beginning/end of the bar
 ; Individual side values can be defined using:
 ;   padding-{left,right}
-;padding = 0
-padding-right = 2
+padding = 0
 
 ; Number of spaces to add before/after each module
 ; Individual side values can be defined using:
 ;   module-margin-{left,right}
-module-margin = 1
+module-margin-left = 1
+module-margin-right = 2
 
 ; Fonts are defined using <font-name>;<vertical-offset>
 ; Font names are specified using a fontconfig pattern.
@@ -107,15 +108,8 @@ module-margin = 1
 ;   font-2 = Termsynu:size=8;-1
 ;   font-3 = FontAwesome:size=10
 ; See the Fonts wiki page for more details
-font-0 = DejaVu Sans Mono:size=11;3
-font-1 = DejaVuSansMono Nerd Font:size=13;3
-
-; Modules are added to one of the available blocks
-;   modules-left = cpu ram
-;   modules-center = xwindow xbacklight
-;   modules-right = ipc clock
-modules-left = workspaces
-modules-right = playback-volume keyboard-layout wireless-network wired-network battery clock
+font-0 = DejaVu Sans Mono:size=11;2
+font-1 = DejaVuSansMono Nerd Font:size=14;3
 
 ; The separator will be inserted between the output of each module
 separator =
@@ -133,45 +127,6 @@ wm-name =
 ; Expects a valid libc locale, for example: sv_SE.UTF-8
 ;locale =
 
-; Position of the system tray window
-; If empty or undefined, tray support will be disabled
-; NOTE: A center aligned tray will cover center aligned modules
-;
-; Available positions:
-;   left
-;   center
-;   right
-;   none
-tray-position =
-
-; If true, the bar will not shift its
-; contents when the tray changes
-tray-detached = false
-
-; Tray icon max size
-tray-maxsize = 16
-
-; DEPRECATED! Since 3.3.0 the tray always uses pseudo-transparency
-; Enable pseudo transparency
-; Will automatically be enabled if a fully transparent
-; background color is defined using `tray-background`
-tray-transparent = false
-
-; Background color for the tray container
-; ARGB color (e.g. #f00, #ff992a, #ddff1023)
-; By default the tray container will use the bar
-; background color.
-tray-background = ${root.background}
-
-; Tray offset defined as pixel value (e.g. 35) or percentage (e.g. 50%)
-tray-offset-x = 0
-tray-offset-y = 0
-
-; Pad the sides of each tray icon
-tray-padding = 0
-
-; Scale factor for tray clients
-tray-scale = 1.0
 
 ; Restack the bar window and put it above the
 ; selected window manager's root
@@ -217,6 +172,53 @@ double-click-right =
 ; - ns-resize : Up and down arrows, can be used to indicate scrolling
 cursor-click = pointer
 cursor-scroll = ns-resize
+
+[bar/main]
+
+inherit = bar/common
+
+; Modules are added to one of the available blocks
+;   modules-left = cpu ram
+;   modules-center = xwindow xbacklight
+;   modules-right = ipc clock
+modules-left = workspaces
+modules-right = playback-volume keyboard-layout wireless-network wired-network battery clock
+
+padding-right = 2
+
+; Position of the system tray window
+; If empty or undefined, tray support will be disabled
+; NOTE: A center aligned tray will cover center aligned modules
+;
+; Available positions:
+;   left
+;   center
+;   right
+;   none
+tray-position = right
+
+; If true, the bar will not shift its
+; contents when the tray changes
+tray-detached = false
+
+; Tray icon max size
+tray-maxsize = 16
+
+; Background color for the tray container
+; ARGB color (e.g. #f00, #ff992a, #ddff1023)
+; By default the tray container will use the bar
+; background color.
+tray-background = ${colors.background-alt}
+
+; Tray offset defined as pixel value (e.g. 35) or percentage (e.g. 50%)
+tray-offset-x = 0
+tray-offset-y = 0
+
+; Pad the sides of each tray icon
+tray-padding = 0
+
+; Scale factor for tray clients
+tray-scale = 1.0
 
 ; Modules
 

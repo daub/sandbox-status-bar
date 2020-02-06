@@ -22,6 +22,9 @@ time-alt = %I:%M %p
 ;   <label> (default)
 format = <label>
 
+format-padding = 1
+format-underline = ${colors.border}
+
 ; Available tokens:
 ;   %date%
 ;   %time%
