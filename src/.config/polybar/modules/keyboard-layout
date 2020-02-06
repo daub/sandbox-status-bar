@@ -13,7 +13,6 @@ format = <label-layout>
 
 format-spacing = 0
 format-padding = 1
-format-underline = ${colors.border}
 
 ; Available tokens:
 ;   %layout%

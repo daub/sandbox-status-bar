@@ -32,8 +32,6 @@ time-format = %H:%M
 ;   <animation-charging>
 format-charging = <animation-charging><label-charging>
 
-format-charging-underline = ${colors.border}
-
 ; Available tags:
 ;   <label-discharging> (default)
 ;   <bar-capacity>
@@ -41,15 +39,11 @@ format-charging-underline = ${colors.border}
 ;   <animation-discharging>
 format-discharging = <ramp-capacity><label-discharging>
 
-format-discharging-underline = ${colors.border}
-
 ; Available tags:
 ;   <label-full> (default)
 ;   <bar-capacity>
 ;   <ramp-capacity>
 format-full = <label-full>
-
-format-full-underline = ${colors.border}
 
 ; Available tokens:
 ;   %percentage% (default) - is set to 100 if full-at is reached

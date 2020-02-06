@@ -20,15 +20,19 @@ interval = 5
 ;   <bar-volume>
 format-volume = <ramp-volume><label-volume>
 
-format-volume-underline = ${colors.border}
-
 ; Available tags:
 ;   <label-muted> (default)
 ;   <ramp-volume>
 ;   <bar-volume>
 format-muted = <label-muted>
 
-format-muted-underline = ${colors.border}
+format-muted-foreground = ${colors.foreground-dim}
+
+;
+format-muted-prefix = ﱝ
+
+format-muted-prefix-padding = 1
+format-muted-prefix-foreground = ${colors.alert}
 
 ; Available tokens:
 ;   %percentage% (default)
@@ -39,10 +43,9 @@ label-volume-padding = 1
 ; Available tokens:
 ;   %percentage% (default)
 ;   %decibels% (unreleased)
-label-muted = ﱝ
+label-muted = %percentage%%
 
 label-muted-padding = 1
-label-muted-foreground = ${colors.foreground-dim}
 
 ; Only applies if <ramp-volume> is used
 ramp-volume-0 = 奄

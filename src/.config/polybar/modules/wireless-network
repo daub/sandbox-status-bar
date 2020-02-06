@@ -34,14 +34,12 @@ unknown-as-up = true
 format-connected = <ramp-signal>
 
 format-connected-padding = 1
-format-connected-underline = ${colors.border}
 
 ; Available tags:
 ;   <label-disconnected> (default)
 format-disconnected = <label-disconnected>
 
 format-disconnected-padding = 1
-format-disconnected-underline = ${colors.border}
 
 ; Available tags:
 ;   <label-connected> (default)

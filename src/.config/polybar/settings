@@ -24,16 +24,18 @@ screenchange-reload = true
 
 ; Compositing operators
 ; @see: https://www.cairographics.org/manual/cairo-cairo-t.html#cairo-operator-t
-compositing-background = source
-compositing-foreground = over
-compositing-overline = over
-compositing-underline = over
-compositing-border = over
+
+; LIGHTEN set for not cutting wider glyphs
+compositing-background = lighten
+;compositing-foreground = over
+;compositing-overline = over
+;compositing-underline = over
+;compositing-border = over
 
 ; Define fallback values used by all module formats
 format-foreground =
 format-background =
-format-underline =
+format-underline = ${colors.border}
 format-overline =
 format-spacing =
 format-padding =
