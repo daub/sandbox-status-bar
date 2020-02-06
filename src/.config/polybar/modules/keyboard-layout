@@ -1,0 +1,64 @@
+[module/keyboard-layout]
+
+type = internal/xkeyboard
+
+; List of indicators to ignore
+blacklist-0 = num lock
+blacklist-1 = scroll lock
+
+; Available tags:
+;   <label-layout> (default)
+;   <label-indicator> (default)
+format = <label-layout>
+format-spacing = 0
+
+; Available tokens:
+;   %layout%
+;   %name%
+;   %number%
+;   %icon%
+; Default: %layout%
+label-layout = %icon% %layout%
+label-layout-padding = 0
+label-layout-background =
+label-layout-foreground =
+
+; layout-icon-[0-9]+ = layout;icon
+; Assign each layout an icon that will be available as %icon% token for the
+; <label-layout> tag. The part before ';' will try to match %layout% value.
+
+layout-icon-default = 
+layout-icon-0 = us;
+
+; indicator-icon-[0-9]+ = indicator;off icon;on icon
+; Provides the content of the %icon% token in label-indicator-*
+
+indicator-icon-default =
+indicator-icon-0 =
+indicator-icon-1 =
+
+; Replaces label-indicator
+; Available tokens:
+;   %name%
+;   %icon%
+; Default: %name%
+label-indicator-on =
+
+; Available tokens:
+;   %name%
+;   %icon%
+; Default: (none)
+label-indicator-off =
+
+; Replaces label-indicator-* if for specific indicators
+; Available tokens:
+;   %name%
+;   %icon%
+label-indicator-on-capslock =
+label-indicator-off-capslock =
+label-indicator-on-numlock =
+label-indicator-off-numlock =
+label-indicator-on-scrolllock =
+label-indicator-off-scrolllock =
+
+; vim:ft=dosini
