@@ -41,6 +41,9 @@ include-file = ~/.config/polybar/modules/wired-network
 [module/clock]
 include-file = ~/.config/polybar/modules/clock
 
+[module/date]
+include-file = ~/.config/polybar/modules/date
+
 [module/playback-volume]
 include-file = ~/.config/polybar/modules/playback-volume
 
@@ -60,7 +63,7 @@ inherit = bar/defaults
 ;   modules-center = xwindow xbacklight
 ;   modules-right = ipc clock
 modules-left = workspaces
-modules-right = playback-volume keyboard-layout wireless-network wired-network battery clock
+modules-right = playback-volume keyboard-layout wireless-network wired-network battery date clock
 
 padding-right = 3
 
