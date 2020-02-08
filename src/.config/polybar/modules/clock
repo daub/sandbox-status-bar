@@ -15,12 +15,15 @@ time = %H:%M
 
 ; if `date-alt` or `time-alt` is defined, clicking
 ; the module will toggle between formats
-date-alt =
-time-alt = %I:%M %p
+;date-alt =
+;time-alt = %I:%M %p
 
 ; Available tags:
 ;   <label> (default)
 format = <label>
+
+format-prefix = 
+format-prefix-padding = 1
 
 ; Available tokens:
 ;   %date%
