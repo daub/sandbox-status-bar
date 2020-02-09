@@ -19,41 +19,41 @@
 ; Settings
 
 [colors]
-include-file = ~/.config/polybar/colors
+include-file = ~/.config/polybar/colors/nord.ini
 
 [settings]
-include-file = ~/.config/polybar/settings
+include-file = ~/.config/polybar/settings.ini
 
 ; Modules
 
 [module/workspaces]
-include-file = ~/.config/polybar/modules/workspaces
+include-file = ~/.config/polybar/modules/workspaces.ini
 
 [module/keyboard-layout]
-include-file = ~/.config/polybar/modules/keyboard-layout
+include-file = ~/.config/polybar/modules/keyboard-layout.ini
 
 [module/wireless-network]
-include-file = ~/.config/polybar/modules/wireless-network
+include-file = ~/.config/polybar/modules/wireless-network.ini
 
 [module/wired-network]
-include-file = ~/.config/polybar/modules/wired-network
+include-file = ~/.config/polybar/modules/wired-network.ini
 
 [module/clock]
-include-file = ~/.config/polybar/modules/clock
+include-file = ~/.config/polybar/modules/clock.ini
 
 [module/date]
-include-file = ~/.config/polybar/modules/date
+include-file = ~/.config/polybar/modules/date.ini
 
 [module/playback-volume]
-include-file = ~/.config/polybar/modules/playback-volume
+include-file = ~/.config/polybar/modules/playback-volume.ini
 
 [module/battery]
-include-file = ~/.config/polybar/modules/battery
+include-file = ~/.config/polybar/modules/battery.ini
 
 ; Bars
 
 [bar/defaults]
-include-file = ~/.config/polybar/bar-defaults
+include-file = ~/.config/polybar/bar-defaults.ini
 
 [bar/main]
 inherit = bar/defaults
@@ -67,6 +67,6 @@ modules-right = playback-volume keyboard-layout wireless-network wired-network b
 
 padding-right = 3
 
-include-file = ~/.config/polybar/tray
+include-file = ~/.config/polybar/tray.ini
 
 ; vim:ft=dosini
